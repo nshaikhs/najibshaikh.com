@@ -1,0 +1,154 @@
+<!-- If you're reading the source, you're my kind of person. Say hi: shaikhnajibs@gmail.com -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MealCraft &mdash; Najib Shaikh</title>
+  <meta name="description" content="AI kitchen agent. 110K lines of code, iOS + Web, Claude Vision ingredient detection, personalized recipe generation. Point your phone at the fridge, get dinner.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='Georgia,serif'>N</text></svg>">
+  <link rel="stylesheet" href="../style.css">
+  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');</script>
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">NS</a>
+    <div class="nav-links">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#projects">AI Projects</a>
+      <a href="../index.html#stack">Stack</a>
+      <a href="../index.html#about">About</a>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a href="../index.html#contact" class="nav-cta">Get In Touch</a>
+    </div>
+  </nav>
+
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link">&larr; All Projects</a>
+      <p class="section-label">Case Study</p>
+      <h1 class="project-hero-title split-lines">MealCraft</h1>
+      <p class="project-hero-sub">An AI kitchen agent that sees what's in your fridge and tells you what to cook. Point your phone at the ingredients, get personalized recipes matched to your dietary preferences and time. Built end-to-end as a consumer AI product.</p>
+
+      <div class="project-hero-metrics">
+        <div class="project-metric">
+          <span class="project-metric-value">110K</span>
+          <span class="project-metric-label">Lines of code</span>
+        </div>
+        <div class="project-metric">
+          <span class="project-metric-value">640</span>
+          <span class="project-metric-label">Source files</span>
+        </div>
+        <div class="project-metric">
+          <span class="project-metric-value">2</span>
+          <span class="project-metric-label">Platforms (iOS + Web)</span>
+        </div>
+        <div class="project-metric">
+          <span class="project-metric-value">AI</span>
+          <span class="project-metric-label">Vision + Generation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="project-content">
+
+        <div class="project-section">
+          <h2>What it is</h2>
+          <p>A consumer AI application available on iOS and web. You open the app, point your phone camera at your fridge or pantry, and Claude Vision identifies every ingredient it can see. Then it generates recipes matched to what you have, your dietary preferences, and how much time you want to spend cooking.</p>
+          <p>Each recipe comes with step-by-step cooking instructions, built-in timers, and substitution suggestions for missing ingredients. It's not a recipe database you search &mdash; it's an AI agent that understands what you have and what you want, and creates something specific to your kitchen right now.</p>
+        </div>
+
+        <div class="project-section">
+          <h2>The stack</h2>
+          <div class="project-stack-grid">
+            <div class="stack-item">
+              <h4>Expo / React Native</h4>
+              <p>Cross-platform mobile framework. Single codebase compiles to iOS and web. Camera access for ingredient scanning, native performance for the cooking timer interface, offline recipe caching.</p>
+            </div>
+            <div class="stack-item">
+              <h4>Claude Vision</h4>
+              <p>Multimodal AI for ingredient identification. Processes camera frames, identifies individual items, estimates quantities, and handles messy real-world conditions &mdash; half-open containers, overlapping items, poor lighting.</p>
+            </div>
+            <div class="stack-item">
+              <h4>Claude API</h4>
+              <p>Recipe generation engine. Takes identified ingredients, user preferences (dietary restrictions, cuisine type, cooking time, skill level), and generates complete recipes with nutritional estimates and substitution options.</p>
+            </div>
+            <div class="stack-item">
+              <h4>Supabase</h4>
+              <p>Backend-as-a-service handling auth, user profiles, preference storage, recipe history, and favorite management. Row-level security for user data isolation. Edge functions for API orchestration.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2>The user flow</h2>
+          <div class="project-timeline">
+            <div class="timeline-item">
+              <span class="timeline-time">Scan</span>
+              <p>Open the camera. Point at the fridge, pantry, or countertop. Claude Vision identifies ingredients in real-time &mdash; "chicken breast, bell peppers, garlic, soy sauce, rice."</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-time">Preferences</span>
+              <p>Set your constraints. Dietary restrictions (keto, vegan, halal). Time available (15 min, 30 min, 1 hour). Cuisine preference. Skill level. Servings needed.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-time">Generate</span>
+              <p>AI generates 3 recipe options ranked by match quality. Each shows cook time, difficulty, calories, and how many of your available ingredients it uses. Pick one.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-time">Cook</span>
+              <p>Step-by-step instructions with built-in timers. "Sear chicken for 4 minutes per side" with a tap-to-start timer. Substitution suggestions if you're missing something.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2>Why I built it</h2>
+          <p>I wanted to ship a consumer AI product end-to-end. Not a wrapper around an API call &mdash; a real product with a product spec, UX flow, technical architecture, AI integration, cross-platform deployment, and user data management. The kind of thing that exercises every muscle from vision model integration to mobile camera APIs to real-time UI updates.</p>
+          <p>The 110K lines of code and 640 source files across two platforms is the proof. This isn't a demo or a hackathon project. It's a production-grade consumer app built with the same rigor you'd expect from a funded startup &mdash; just built by one person and an AI agent in a terminal.</p>
+        </div>
+
+        <div class="project-section">
+          <h2>Tech</h2>
+          <div class="project-tech">
+            <span>Expo</span>
+            <span>React Native</span>
+            <span>Supabase</span>
+            <span>Claude API</span>
+            <span>Claude Vision</span>
+            <span>TypeScript</span>
+            <span>iOS</span>
+            <span>Web</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-name">NAJIB</div>
+    <p class="footer-colophon">This entire site &mdash; design, code, copy &mdash; was built by talking to an AI agent in a terminal. No design tool was opened. No code was written by hand. Just words.</p>
+    <p class="footer-copy">&copy; 2026 &middot; Built with Claude Code</p>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!-- If you're reading the source, you're my kind of person. Say hi: shaikhnajibs@gmail.com -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Second Brain &mdash; Najib Shaikh</title>
+  <meta name="description" content="An AI knowledge graph built on Obsidian + LightRAG. 1,537 vault notes, 10 parallel agents, retrieval-augmented generation over years of documents.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='Georgia,serif'>N</text></svg>">
+  <link rel="stylesheet" href="../style.css">
+  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');</script>
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">NS</a>
+    <div class="nav-links">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#projects">AI Projects</a>
+      <a href="../index.html#stack">Stack</a>
+      <a href="../index.html#about">About</a>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a href="../index.html#contact" class="nav-cta">Get In Touch</a>
+    </div>
+  </nav>
+
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link">&larr; All Projects</a>
+      <p class="section-label">Case Study</p>
+      <h1 class="project-hero-title split-lines">Second Brain</h1>
+      <p class="project-hero-sub">An AI knowledge graph that turns years of documents into a searchable, structured second brain. Not a notes app &mdash; a retrieval-augmented generation system built on Obsidian and LightRAG.</p>
+
+      <div class="project-hero-metrics">
+        <div class="project-metric">
+          <span class="project-metric-value">1,537</span>
+          <span class="project-metric-label">Vault notes</span>
+        </div>
+        <div class="project-metric">
+          <span class="project-metric-value">29</span>
+          <span class="project-metric-label">Contact files</span>
+        </div>
+        <div class="project-metric">
+          <span class="project-metric-value">5,782</span>
+          <span class="project-metric-label">Duplicates removed</span>
+        </div>
+        <div class="project-metric">
+          <span class="project-metric-value">3,197</span>
+          <span class="project-metric-label">Low-value filtered</span>
+        </div>
+        <div class="project-metric">
+          <span class="project-metric-value">22</span>
+          <span class="project-metric-label">Slash commands</span>
+        </div>
+        <div class="project-metric">
+          <span class="project-metric-value">9621</span>
+          <span class="project-metric-label">LightRAG port</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="project-content">
+
+        <div class="project-section">
+          <h2>What it is</h2>
+          <p>An ingestion pipeline that takes years of accumulated documents &mdash; PDFs, DOCX, XLSX, emails, meeting notes, research, call transcripts &mdash; and converts them into a structured, searchable knowledge graph. The pipeline is fully automated: 10 parallel Claude Code agents process 30 files at a time, deduplicating, enriching, and organizing everything into an Obsidian vault with a PARA folder structure.</p>
+          <p>Once ingested, LightRAG indexes the entire vault and serves it as a retrieval-augmented generation endpoint. I can ask natural language questions about anything I've ever written, read, or received &mdash; and get grounded answers with source references. Not keyword search. Semantic retrieval over a knowledge graph.</p>
+        </div>
+
+        <div class="project-section">
+          <h2>The stack</h2>
+          <div class="project-stack-grid">
+            <div class="stack-item">
+              <h4>Obsidian</h4>
+              <p>The structured vault. PARA folder architecture (Projects, Areas, Resources, Archive) with domain-scoped CLAUDE.md router files in every directory to prevent hallucination and keep agents on-task.</p>
+            </div>
+            <div class="stack-item">
+              <h4>LightRAG</h4>
+              <p>The knowledge graph engine. Indexes the full vault, builds entity-relationship graphs, and serves semantic queries on port 9621. Answers come back grounded in actual documents, not AI imagination.</p>
+            </div>
+            <div class="stack-item">
+              <h4>Python Ingestion Pipeline</h4>
+              <p>Custom pipeline that reads raw files, extracts text, deduplicates (5,782 caught), filters low-value content (3,197 removed), and writes clean Obsidian-formatted notes with frontmatter and wikilinks.</p>
+            </div>
+            <div class="stack-item">
+              <h4>Claude Code Agents</h4>
+              <p>10 parallel agents processing batches of 30 files. Each agent enriches notes with auto-generated wikilinks, frontmatter metadata, relationship tags, and domain classification. SQLite manifest tracks every file through the pipeline.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2>How it works</h2>
+          <div class="project-timeline">
+            <div class="timeline-item">
+              <span class="timeline-time">Ingest</span>
+              <p>Raw documents (PDFs, DOCX, XLSX, emails, meeting notes) are fed into the Python ingestion pipeline. Each file is parsed, text-extracted, and hashed for deduplication.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-time">Deduplicate</span>
+              <p>5,782 duplicate files identified and removed. Fuzzy matching catches near-duplicates &mdash; different versions of the same document, forwarded emails, copy-paste artifacts.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-time">Filter</span>
+              <p>3,197 low-value files removed &mdash; auto-generated reports, blank templates, system logs, receipts. Quality gate ensures only meaningful content enters the vault.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-time">Enrich</span>
+              <p>10 Claude Code agents process 30 files at a time. Each note gets frontmatter (date, source, domain, tags), auto-generated wikilinks to related notes, and relationship-tier tags for contact files.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-time">Organize</span>
+              <p>Notes are sorted into the PARA structure. Domain-scoped CLAUDE.md router files in each directory define what belongs there and how agents should handle queries about that domain.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-time">Index</span>
+              <p>LightRAG indexes the full vault into a knowledge graph. Entity extraction, relationship mapping, and semantic embeddings make the entire archive queryable in natural language.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2>What makes it different</h2>
+          <p>Most "second brain" setups are just fancy note-taking. This one has teeth. The CLAUDE.md router files in every directory prevent AI agents from hallucinating by scoping their context to the relevant domain. The contact files aren't just address books &mdash; they have relationship tiers, interaction history, and context about what we've discussed and agreed on.</p>
+          <p>The real power is compounding. Every document I process makes the knowledge graph smarter. Every new connection between notes surfaces relationships I didn't know existed. After 1,537 notes, asking "What did I decide about X six months ago?" actually returns a grounded, sourced answer.</p>
+        </div>
+
+        <div class="project-section">
+          <h2>Tech</h2>
+          <div class="project-tech">
+            <span>Obsidian</span>
+            <span>LightRAG</span>
+            <span>Python</span>
+            <span>SQLite</span>
+            <span>Claude Code Agents</span>
+            <span>PARA Method</span>
+            <span>Knowledge Graph</span>
+            <span>RAG</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-name">NAJIB</div>
+    <p class="footer-colophon">This entire site &mdash; design, code, copy &mdash; was built by talking to an AI agent in a terminal. No design tool was opened. No code was written by hand. Just words.</p>
+    <p class="footer-copy">&copy; 2026 &middot; Built with Claude Code</p>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>

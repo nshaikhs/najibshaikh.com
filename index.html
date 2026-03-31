@@ -1,0 +1,732 @@
+<!-- If you're reading the source, you're my kind of person. Say hi: shaikhnajibs@gmail.com -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Najib Shaikh &mdash; Operator &amp; Builder</title>
+  <meta name="description" content="The person the CEO calls. GTM, corp dev, international expansion, operations — built from zero at four companies. $20M to $150M. $80M to $230M. $100M+ raised.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Najib Shaikh — Operator & Builder">
+  <meta property="og:description" content="I build everything outside of product. GTM, corp dev, international expansion, operations. Four companies. Always from zero.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://najibshaikh.com">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Najib Shaikh — Operator & Builder">
+  <meta name="twitter:description" content="I build everything outside of product. Four companies. $20M to $150M. $80M to $230M.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='Georgia,serif'>N</text></svg>">
+  <script>
+    var saved = localStorage.getItem('theme');
+    if (saved) { document.documentElement.setAttribute('data-theme', saved); }
+    else if (window.matchMedia('(prefers-color-scheme: light)').matches) { document.documentElement.setAttribute('data-theme', 'light'); }
+    else { document.documentElement.setAttribute('data-theme', 'dark'); }
+  </script>
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- ═══════ NAV ═══════ -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">NS</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#projects">AI Projects</a>
+      <a href="#stack">Stack</a>
+      <a href="#blog">Writing</a>
+      <button class="nav-burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a href="#contact" class="nav-cta">Get In Touch</a>
+    </div>
+  </nav>
+
+  <!-- ═══════ HERO ═══════ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-label">Operator &middot; Builder &middot; Chief of Staff</p>
+      <h1 class="hero-title split-lines">I build companies from zero.</h1>
+      <p class="hero-sub split-lines">GTM, fundraising, international expansion, operations &mdash; I'm the person the CEO calls to build everything outside of product. Four companies. Always from zero.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">$<span data-count="280">0</span>M+</span>
+          <span class="stat-label">Revenue growth driven</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">$<span data-count="100">0</span>M+</span>
+          <span class="stat-label">Raised at my startups</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number"><span data-count="4">0</span></span>
+          <span class="stat-label">Companies built</span>
+        </div>
+      </div>
+      <div class="hero-ctas">
+        <a href="#work" class="btn btn-primary">See the Work</a>
+        <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════ LOGO TICKER ═══════ -->
+  <section class="logos-section">
+    <p class="logos-caption">Partnerships closed and stakeholders managed</p>
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 100 30" fill="currentColor"><text x="50" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18">T-Mobile</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 100 30" fill="currentColor"><text x="50" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18">Verizon</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 100 30" fill="currentColor"><text x="50" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18">Walmart</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 100 30" fill="currentColor"><text x="50" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18">BestBuy</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 100 30" fill="currentColor"><text x="50" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18">Pepsi</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 100 30" fill="currentColor"><text x="50" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18">Coca-Cola</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 90 30" fill="currentColor"><text x="45" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="14">PIF / Sanabil</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 100 30" fill="currentColor"><text x="50" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18">Affirm</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 120 30" fill="currentColor"><text x="60" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="14">Volition Capital</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 120 30" fill="currentColor"><text x="60" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="14">Shorooq Partners</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 100 30" fill="currentColor"><text x="50" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="14">500 Global</text></svg>
+        </div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 100 30" fill="currentColor"><text x="50" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18">T-Mobile</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 100 30" fill="currentColor"><text x="50" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18">Verizon</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 100 30" fill="currentColor"><text x="50" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18">Walmart</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 100 30" fill="currentColor"><text x="50" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18">BestBuy</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 100 30" fill="currentColor"><text x="50" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18">Pepsi</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 100 30" fill="currentColor"><text x="50" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18">Coca-Cola</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 90 30" fill="currentColor"><text x="45" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="14">PIF / Sanabil</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 100 30" fill="currentColor"><text x="50" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18">Affirm</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 120 30" fill="currentColor"><text x="60" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="14">Volition Capital</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 120 30" fill="currentColor"><text x="60" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="14">Shorooq Partners</text></svg>
+        </div>
+        <div class="ticker-item">
+          <svg class="ticker-logo" viewBox="0 0 100 30" fill="currentColor"><text x="50" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="14">500 Global</text></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ WORK ═══════ -->
+  <section id="work" class="section">
+    <div class="container">
+      <p class="section-label">Selected Work</p>
+      <h2 class="section-title split-lines">Four companies. Four chapters.<br>Each one built from zero.</h2>
+
+      <!-- US Mobile -->
+      <article class="work-card" data-cursor-text="View">
+        <div class="work-card-header">
+          <div class="work-meta">
+            <span class="work-tag">Telecom</span>
+            <span class="work-tag">New York</span>
+            <span class="work-tag">2020 &ndash; 2022</span>
+          </div>
+          <h3 class="work-title">US Mobile</h3>
+          <p class="work-role">Strategy &amp; Operations &mdash; CEO's first strategic hire</p>
+        </div>
+        <div class="work-metrics">
+          <div class="metric">
+            <span class="metric-value">$20M&rarr;$150M</span>
+            <span class="metric-label">Revenue during tenure</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">$30M</span>
+            <span class="metric-label">Series A raised</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">0 &rarr; 1</span>
+            <span class="metric-label">B2B division created</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">Inc. 50</span>
+            <span class="metric-label">Fastest growing</span>
+          </div>
+        </div>
+        <div class="work-body">
+          <div class="work-context">
+            <p>Joined as the CEO's first strategic hire during hypergrowth. No B2B business. No sales infrastructure. No CX team. Revenue went from $20M to $150M. Inc. named us Top 50 Fastest Growing. Forbes called us a Top Place to Work.</p>
+          </div>
+          <div class="work-results">
+            <div class="result"><p><strong>GTM &mdash; 0 to 1.</strong> Created the company's first B2B division from nothing &mdash; hired the team, designed the GTM playbook, closed the first deals. $3.5M at 85% margins in 15 months with negative churn.</p></div>
+            <div class="result"><p><strong>Corp Dev &mdash; Series A.</strong> Led the $30M Series A from Volition Capital at a 10x revenue multiple. Managed end-to-end: financial modeling, investor pipeline, data room, deal closure.</p></div>
+            <div class="result"><p><strong>Scaling &mdash; 1 to 10.</strong> Closed Fortune 500 partnerships (T-Mobile, Verizon, BestBuy, Walmart, Affirm) that drove 30% YoY growth. Built a 130-person CX team across 3 countries &mdash; NPS of 57 vs. industry average of 2.</p></div>
+            <div class="result"><p><strong>Operations &mdash; Systems from scratch.</strong> Designed the entire sales tech stack (Salesforce + HubSpot). Cut sales cycle 60%, lifted conversions 133%, reduced CAC 45%.</p></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Retailo -->
+      <article class="work-card" data-cursor-text="View">
+        <div class="work-card-header">
+          <div class="work-meta">
+            <span class="work-tag">E-Commerce / SaaS</span>
+            <span class="work-tag">Dubai &amp; Riyadh</span>
+            <span class="work-tag">2022 &ndash; 2024</span>
+          </div>
+          <h3 class="work-title">Retailo Technologies</h3>
+          <p class="work-role">Chief of Staff to CEO / Director, Strategy &amp; Investments</p>
+        </div>
+        <div class="work-metrics">
+          <div class="metric">
+            <span class="metric-value">$80M&rarr;$230M</span>
+            <span class="metric-label">Revenue during tenure</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">$60M</span>
+            <span class="metric-label">Total capital raised</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">75%</span>
+            <span class="metric-label">Margin improvement</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">M&amp;A</span>
+            <span class="metric-label">Exit managed</span>
+          </div>
+        </div>
+        <div class="work-body">
+          <div class="work-context">
+            <p>CEO's right hand across 5 business units. Promoted to the executive team &mdash; owned strategic planning, cross-functional execution, P&amp;L, board communications, and fundraising. Revenue scaled from $80M to $230M during tenure.</p>
+          </div>
+          <div class="work-results">
+            <div class="result"><p><strong>Corp Dev &mdash; Fundraising &amp; Debt.</strong> Led $60M in total capital raised: equity fundraising end-to-end with global institutional investors, plus a $14M venture debt facility with a Korean PE firm ($6B AUM) to strengthen the balance sheet without dilution.</p></div>
+            <div class="result"><p><strong>Strategy &mdash; Margin transformation.</strong> Burn rate was unsustainable. Ran a company-wide restructuring that improved unit economics by 75% while sustaining 40% YoY top-line growth. Scaled SaaS business to $1M ARR in 6 months.</p></div>
+            <div class="result"><p><strong>Board &amp; Governance.</strong> Managed a 7-member board (VCs, family offices, PE) and 20+ institutional stakeholders. Transparent reporting, strategic alignment, crisis communication.</p></div>
+            <div class="result"><p><strong>M&amp;A &mdash; Exit execution.</strong> Led the end-to-end sale of a subsidiary to a Singaporean conglomerate. International expansion into 3 GCC regions through distribution and market-entry agreements.</p></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Ad-Shield -->
+      <article class="work-card" data-cursor-text="View">
+        <div class="work-card-header">
+          <div class="work-meta">
+            <span class="work-tag">AdTech</span>
+            <span class="work-tag">New York &amp; Europe</span>
+            <span class="work-tag">2024 &ndash; Present</span>
+          </div>
+          <h3 class="work-title">Ad-Shield</h3>
+          <p class="work-role">International Expansion &mdash; Strategy &amp; Operations</p>
+        </div>
+        <div class="work-metrics">
+          <div class="metric">
+            <span class="metric-value">0 &rarr; 3</span>
+            <span class="metric-label">European markets launched</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">$356M</span>
+            <span class="metric-label">TAM identified</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">1,196</span>
+            <span class="metric-label">Publishers mapped</span>
+          </div>
+        </div>
+        <div class="work-body">
+          <div class="work-context">
+            <p>Led the international expansion of an adtech platform from a US-only business into three European markets &mdash; building everything from market intelligence to local GTM from scratch.</p>
+          </div>
+          <div class="work-results">
+            <div class="result"><p><strong>International &mdash; 0 to 1 in Europe.</strong> Designed and executed market entry strategy for Germany, France, and UK. No playbook existed. Built competitive intelligence, pricing models, and localized sales materials for each market.</p></div>
+            <div class="result"><p><strong>GTM &mdash; Pipeline from nothing.</strong> Mapped 1,196 target publishers across three countries, built an enrichment pipeline, and identified 505 high-priority untouched prospects in a $356M addressable market.</p></div>
+            <div class="result"><p><strong>Operations &mdash; Local teams.</strong> Recruited and managed country-level partners across Europe. Developed differentiated outreach strategies per market &mdash; what works in Germany doesn't work in the UK.</p></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Fanfinity AI -->
+      <article class="work-card" data-cursor-text="View">
+        <div class="work-card-header">
+          <div class="work-meta">
+            <span class="work-tag">AI / Sports Tech</span>
+            <span class="work-tag">Riyadh &amp; New York</span>
+            <span class="work-tag">2025 &ndash; Present</span>
+          </div>
+          <h3 class="work-title">Fanfinity AI</h3>
+          <p class="work-role">Director, Strategy &amp; Operations &mdash; Founding Team</p>
+        </div>
+        <div class="work-metrics">
+          <div class="metric">
+            <span class="metric-value">0 &rarr; 1</span>
+            <span class="metric-label">Built from scratch</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">$3.5M</span>
+            <span class="metric-label">Capital raised</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">PIF</span>
+            <span class="metric-label">Sanabil-backed</span>
+          </div>
+        </div>
+        <div class="work-body">
+          <div class="work-context">
+            <p>Recruited to build the entire commercial and operational foundation for a PIF-backed AI platform in the Saudi sports market. Pre-revenue to first partnerships. $3.5M raised from Sanabil Venture Studio.</p>
+          </div>
+          <div class="work-results">
+            <div class="result"><p><strong>GTM &mdash; 0 to 1.</strong> Designed the go-to-market strategy from scratch &mdash; positioning AI-derived insights (fan analytics, sponsorship optimization, match intelligence) as the core value proposition to Saudi Pro League buyers.</p></div>
+            <div class="result"><p><strong>Product Strategy.</strong> Translated complex AI capabilities into business value narratives for non-technical government and sports organization stakeholders. Bridged the gap between what the product does and what buyers care about.</p></div>
+            <div class="result"><p><strong>Corp Dev &mdash; Fundraising.</strong> Leading fundraising prep and investor materials for regional VCs and government-backed funds. Building the pipeline from zero in a market where relationships are everything.</p></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══════ CONVICTION ═══════ -->
+  <section class="conviction-section">
+    <div class="container">
+      <blockquote class="conviction">
+        <p class="conviction-text split-lines">The companies that win in AI will crack go-to-market, not just model performance.</p>
+      </blockquote>
+    </div>
+  </section>
+
+      <div class="projects-list">
+
+        <a href="projects/chief-of-staff.html" class="project-card-link">
+          <article class="project-case">
+            <div class="project-case-header">
+              <div class="project-case-top">
+                <h3 class="project-case-title">Chief of Staff</h3>
+                <div class="project-case-stats-mini">
+                  <span>165 skills</span>
+                  <span>99 agents</span>
+                  <span>21 integrations</span>
+                </div>
+              </div>
+              <p class="project-case-oneliner">My AI chief of staff &mdash; runs my professional life from a terminal. Meeting prep, decision tracking, inbox triage, and cross-project operations. All automated, all from one place.</p>
+              <span class="project-case-cta">View case study &rarr;</span>
+            </div>
+          </article>
+        </a>
+
+        <a href="projects/second-brain.html" class="project-card-link">
+          <article class="project-case">
+            <div class="project-case-header">
+              <div class="project-case-top">
+                <h3 class="project-case-title">Second Brain</h3>
+                <div class="project-case-stats-mini">
+                  <span>1,537 notes</span>
+                  <span>29 contact files</span>
+                  <span>LightRAG</span>
+                </div>
+              </div>
+              <p class="project-case-oneliner">An AI-powered knowledge graph built on Obsidian with LightRAG. 1,537 vault notes ingested from years of documents, auto-enriched with wikilinks and frontmatter. Retrieval-augmented memory across everything I've ever worked on.</p>
+              <span class="project-case-cta">View case study &rarr;</span>
+            </div>
+          </article>
+        </a>
+
+        <a href="projects/ai-operating-system.html" class="project-card-link">
+          <article class="project-case">
+            <div class="project-case-header">
+              <div class="project-case-top">
+                <h3 class="project-case-title">AI Operating System for Physical Businesses</h3>
+                <div class="project-case-stats-mini">
+                  <span>40K lines</span>
+                  <span>94 files</span>
+                  <span>4 internal tools</span>
+                </div>
+              </div>
+              <p class="project-case-oneliner">An AI command center for SMB operations &mdash; lead scoring engine, dynamic sales scripts across 10 verticals, CRM pipeline, and automated email sequences. Built to replace 16 hours/week of admin work for physical businesses.</p>
+              <span class="project-case-cta">View case study &rarr;</span>
+            </div>
+          </article>
+        </a>
+
+        <a href="projects/mealcraft.html" class="project-card-link">
+          <article class="project-case">
+            <div class="project-case-header">
+              <div class="project-case-top">
+                <h3 class="project-case-title">MealCraft</h3>
+                <div class="project-case-stats-mini">
+                  <span>110K lines</span>
+                  <span>640 files</span>
+                  <span>iOS + Web</span>
+                </div>
+              </div>
+              <p class="project-case-oneliner">AI kitchen agent that turns what's in your fridge into recipes. Snap a photo, get a meal plan. Full consumer app with real-time ingredient recognition.</p>
+              <span class="project-case-cta">View case study &rarr;</span>
+            </div>
+          </article>
+        </a>
+
+        <a href="projects/content-engine.html" class="project-card-link">
+          <article class="project-case">
+            <div class="project-case-header">
+              <div class="project-case-top">
+                <h3 class="project-case-title">AI Content Engine</h3>
+                <div class="project-case-stats-mini">
+                  <span>11K lines</span>
+                  <span>60 agents</span>
+                  <span>5 channels</span>
+                </div>
+              </div>
+              <p class="project-case-oneliner">Multi-channel content pipeline that goes from topic research to published video autonomously. Script generation, AI voiceover, editing, thumbnails, and cross-platform distribution.</p>
+              <span class="project-case-cta">View case study &rarr;</span>
+            </div>
+          </article>
+        </a>
+
+        <a href="projects/plugins.html" class="project-card-link">
+          <article class="project-case">
+            <div class="project-case-header">
+              <div class="project-case-top">
+                <h3 class="project-case-title">Claude Code Plugin Packs</h3>
+                <div class="project-case-stats-mini">
+                  <span>4 packs</span>
+                  <span>On Gumroad</span>
+                  <span>Revenue generating</span>
+                </div>
+              </div>
+              <p class="project-case-oneliner">Skill packs for Claude Code &mdash; marketing, SEO, design, and workflow automation. Built by an operator, for operators who want AI leverage without writing code.</p>
+              <span class="project-case-cta">View case study &rarr;</span>
+            </div>
+          </article>
+        </a>
+
+        <a href="projects/advisory.html" class="project-card-link">
+          <article class="project-case">
+            <div class="project-case-header">
+              <div class="project-case-top">
+                <h3 class="project-case-title">Startup Advisory</h3>
+                <div class="project-case-stats-mini">
+                  <span>3 startups</span>
+                  <span>US + Middle East</span>
+                  <span>AI-native</span>
+                </div>
+              </div>
+              <p class="project-case-oneliner">Advising AI-native startups on GTM strategy, fundraising, and commercial launches. Caravan Media, Clymb AI, Mentoga.</p>
+              <span class="project-case-cta">View case study &rarr;</span>
+            </div>
+          </article>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ RECOMMENDED STACK ═══════ -->
+  <section id="stack" class="section">
+    <div class="container">
+      <p class="section-label">The Stack</p>
+      <h2 class="section-title split-lines">Repos I recommend<br>for Claude Code.</h2>
+      <p class="stack-intro">I've tested 50+ repos, plugins, and MCP servers. These are the ones that actually changed how I work. Each one solves a real problem &mdash; no hype, no bloat.</p>
+
+      <div class="repos-grid">
+
+        <a class="repo-card" href="https://github.com/affaan-m/everything-claude-code" target="_blank" rel="noopener">
+          <div class="repo-header">
+            <span class="repo-name">everything-claude-code</span>
+            <span class="repo-arrow">&nearr;</span>
+          </div>
+          <p class="repo-desc">The complete Claude Code toolkit. 200+ skills, rules, agents, and hooks in one install. If you're going to use one repo, use this one.</p>
+          <div class="repo-use">
+            <span class="repo-use-label">Use for</span>
+            <span>Full CC setup from zero</span>
+          </div>
+        </a>
+
+        <a class="repo-card" href="https://github.com/glittercowboy/get-shit-done" target="_blank" rel="noopener">
+          <div class="repo-header">
+            <span class="repo-name">get-shit-done</span>
+            <span class="repo-arrow">&nearr;</span>
+          </div>
+          <p class="repo-desc">Structured project execution with discuss &rarr; plan &rarr; execute phases. Turns vague ideas into shipped features with atomic commits and verification loops.</p>
+          <div class="repo-use">
+            <span class="repo-use-label">Use for</span>
+            <span>Shipping features fast</span>
+          </div>
+        </a>
+
+        <a class="repo-card" href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener">
+          <div class="repo-header">
+            <span class="repo-name">claude-mem</span>
+            <span class="repo-arrow">&nearr;</span>
+          </div>
+          <p class="repo-desc">Persistent memory across Claude Code sessions. Your AI remembers past conversations, decisions, and patterns. No more re-explaining context every session.</p>
+          <div class="repo-use">
+            <span class="repo-use-label">Use for</span>
+            <span>Cross-session memory</span>
+          </div>
+        </a>
+
+        <a class="repo-card" href="https://github.com/upstash/context7" target="_blank" rel="noopener">
+          <div class="repo-header">
+            <span class="repo-name">context7</span>
+            <span class="repo-arrow">&nearr;</span>
+          </div>
+          <p class="repo-desc">Real-time documentation lookup for any library. Claude stops hallucinating outdated APIs because it reads the current docs before answering.</p>
+          <div class="repo-use">
+            <span class="repo-use-label">Use for</span>
+            <span>Accurate library usage</span>
+          </div>
+        </a>
+
+        <a class="repo-card" href="https://github.com/smtg-ai/claude-squad" target="_blank" rel="noopener">
+          <div class="repo-header">
+            <span class="repo-name">claude-squad</span>
+            <span class="repo-arrow">&nearr;</span>
+          </div>
+          <p class="repo-desc">Run multiple Claude Code agents in parallel with a TUI manager. Essential when you need to refactor across many files or run independent tasks simultaneously.</p>
+          <div class="repo-use">
+            <span class="repo-use-label">Use for</span>
+            <span>Parallel agent execution</span>
+          </div>
+        </a>
+
+        <a class="repo-card" href="https://github.com/obra/superpowers" target="_blank" rel="noopener">
+          <div class="repo-header">
+            <span class="repo-name">superpowers</span>
+            <span class="repo-arrow">&nearr;</span>
+          </div>
+          <p class="repo-desc">TDD, code review, debugging, and planning workflows that enforce quality. Makes Claude Code operate like a senior engineer instead of a fast junior.</p>
+          <div class="repo-use">
+            <span class="repo-use-label">Use for</span>
+            <span>Code quality enforcement</span>
+          </div>
+        </a>
+
+        <a class="repo-card" href="https://github.com/eyaltoledano/claude-task-master" target="_blank" rel="noopener">
+          <div class="repo-header">
+            <span class="repo-name">claude-task-master</span>
+            <span class="repo-arrow">&nearr;</span>
+          </div>
+          <p class="repo-desc">AI-powered task management that breaks complex projects into executable steps. Dependency tracking, priority scoring, and automatic sub-task generation. Like having a PM built into your terminal.</p>
+          <div class="repo-use">
+            <span class="repo-use-label">Use for</span>
+            <span>Project task management</span>
+          </div>
+        </a>
+
+        <a class="repo-card" href="https://github.com/hesreallyhim/awesome-claude-code" target="_blank" rel="noopener">
+          <div class="repo-header">
+            <span class="repo-name">awesome-claude-code</span>
+            <span class="repo-arrow">&nearr;</span>
+          </div>
+          <p class="repo-desc">The curated directory of everything in the Claude Code ecosystem &mdash; plugins, skills, MCP servers, agents, tips. Updated weekly. Best starting point if you're exploring what's possible.</p>
+          <div class="repo-use">
+            <span class="repo-use-label">Use for</span>
+            <span>Discovery &amp; exploration</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ PHILOSOPHY ═══════ -->
+  <section id="philosophy" class="section">
+    <div class="container">
+      <p class="section-label">How I Think</p>
+      <h2 class="section-title split-lines">Operating philosophy</h2>
+
+      <div class="philosophy-grid">
+        <div class="philosophy-card">
+          <span class="philosophy-number">01</span>
+          <h3>I build from zero, not optimize from ten.</h3>
+          <p>My best work happens when there's no playbook. No existing team. No proven GTM. Just a problem and a mandate to figure it out.</p>
+        </div>
+        <div class="philosophy-card">
+          <span class="philosophy-number">02</span>
+          <h3>Bias toward action, but not blind action.</h3>
+          <p>I move fast, but in the right direction. That means understanding the real problem before building anything.</p>
+        </div>
+        <div class="philosophy-card">
+          <span class="philosophy-number">03</span>
+          <h3>The CEO should spend 80% of their time on product.</h3>
+          <p>My job is to own everything that isn't the founder's superpower &mdash; so they can focus on what moves the company.</p>
+        </div>
+        <div class="philosophy-card">
+          <span class="philosophy-number">04</span>
+          <h3>I don't build process for process's sake.</h3>
+          <p>Every system I build has one test: does the team move faster with it than without it? If not, kill it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ ABOUT ═══════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-content">
+        <p class="section-label">About</p>
+        <h2 class="section-title split-lines">Economics degree to AI builder.</h2>
+        <div class="about-prose">
+          <p class="about-bio about-bio--lead">I studied Economics and Political Science at LUMS. I've never taken a CS class. I can't write a for loop from memory. And yet &mdash; I've built 7 AI projects, deployed 99 agents, and run my entire professional life from a terminal.</p>
+          <p class="about-bio">For six years I was the person founders called to build everything outside of product &mdash; GTM, corp dev, fundraising, international expansion, operations. Four companies now worth $1.5B+ combined. Across the US, Middle East, and Europe. Always 0&rarr;1 or 1&rarr;10.</p>
+          <p class="about-bio">Then I discovered what happens when an operator gets serious about AI. Not "uses ChatGPT for emails" serious. <em>Builds an entire operating system from a terminal</em> serious. I went from zero technical background to orchestrating 165 skills, 21 MCP integrations, and 7 automated cron jobs that manage my day while I sleep.</p>
+          <p class="about-bio">That's the real story. Not that I can code &mdash; I can't. It's that the line between "technical" and "non-technical" has collapsed, and I'm proof. The best AI operators won't be engineers. They'll be people who understand business deeply enough to know what to build, and AI fluent enough to build it.</p>
+        </div>
+
+        <div class="about-ai-stats">
+          <div class="ai-stat">
+            <span class="ai-stat-value">165</span>
+            <span class="ai-stat-label">AI skills deployed</span>
+          </div>
+          <div class="ai-stat">
+            <span class="ai-stat-value">99</span>
+            <span class="ai-stat-label">Agents orchestrated</span>
+          </div>
+          <div class="ai-stat">
+            <span class="ai-stat-value">21</span>
+            <span class="ai-stat-label">System integrations</span>
+          </div>
+          <div class="ai-stat">
+            <span class="ai-stat-value">7</span>
+            <span class="ai-stat-label">AI projects shipped</span>
+          </div>
+          <div class="ai-stat">
+            <span class="ai-stat-value">160K+</span>
+            <span class="ai-stat-label">Lines of AI-generated code</span>
+          </div>
+          <div class="ai-stat">
+            <span class="ai-stat-value">0</span>
+            <span class="ai-stat-label">CS classes taken</span>
+          </div>
+        </div>
+
+        <p class="about-bio about-coda">Based in New York. I play basketball, padel, and occasionally swim long enough to think clearly about hard problems.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ BLOG ═══════ -->
+  <section id="blog" class="section">
+    <div class="container">
+      <p class="section-label">Writing</p>
+      <h2 class="section-title split-lines">Things I think about.</h2>
+
+      <div class="blog-grid">
+        <article class="blog-post">
+          <span class="blog-date">Coming soon</span>
+          <h3>The AI Chief of Staff is real &mdash; I built one</h3>
+          <p>Product Hunt just created an "AI Chief of Staff" category. Littlebird, jared.so, Fellow.ai are all racing to own it. But the best version isn't a product &mdash; it's a system you build yourself. Here's mine: 165 skills, 99 agents, 21 integrations, running from a terminal.</p>
+        </article>
+        <article class="blog-post">
+          <span class="blog-date">Coming soon</span>
+          <h3>I stopped opening my code editor. I just talk now.</h3>
+          <p>776 upvotes on r/ClaudeAI: "I stopped using Claude.ai entirely. I run my entire business through Claude Code." That's my story too. What happens when a non-technical operator goes all-in on AI agents &mdash; and it actually works.</p>
+        </article>
+        <article class="blog-post">
+          <span class="blog-date">Coming soon</span>
+          <h3>Vibe coding is dead. Agentic engineering is here.</h3>
+          <p>Karpathy coined "vibe coding." Now he's calling it "agentic engineering." $300B in SaaS market cap evaporated when investors realized AI agents might replace the tools, not just use them. What this means for operators.</p>
+        </article>
+        <article class="blog-post">
+          <span class="blog-date">Coming soon</span>
+          <h3>Why GTM is the real moat in AI</h3>
+          <p>Everyone's building models. Nobody knows how to sell them. An open-source system on a $500 GPU now outperforms Claude on coding benchmarks. If the models are commoditizing, the only moat left is distribution.</p>
+        </article>
+        <article class="blog-post">
+          <span class="blog-date">Coming soon</span>
+          <h3>The 0&rarr;1 playbook nobody teaches</h3>
+          <p>I've built four companies from zero. The first 90 days look the same every time &mdash; whether it's telecom in New York or sports tech in Riyadh. Here's the pattern.</p>
+        </article>
+        <article class="blog-post">
+          <span class="blog-date">Coming soon</span>
+          <h3>The four Chief of Staff archetypes</h3>
+          <p>Bain Capital published a framework for CoS hiring. Most founders get it wrong &mdash; they hire an executor when they need a strategist, or a strategist when they need a builder. Here's how I think about which one you actually need.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ CONTACT ═══════ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-inner">
+        <h2 class="contact-title split-lines">Let's talk.</h2>
+        <div class="contact-qualify">
+          <div class="qualify-item">
+            <span class="qualify-label">What I do</span>
+            <p>Build commercial infrastructure for technical products &mdash; GTM, partnerships, fundraising, operations. From zero.</p>
+          </div>
+          <div class="qualify-item">
+            <span class="qualify-label">Best fit</span>
+            <p>Series A companies in AI or deep tech that need an operator to own everything outside product and engineering.</p>
+          </div>
+          <div class="qualify-item">
+            <span class="qualify-label">Currently</span>
+            <p>Exploring Chief of Staff and founding operator roles at AI-first companies in New York.</p>
+          </div>
+        </div>
+        <div class="contact-links">
+          <a href="https://calendly.com/shaikhnajibs" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">Schedule a Call</a>
+          <a href="mailto:shaikhnajibs@gmail.com" class="btn btn-ghost btn-large">shaikhnajibs@gmail.com</a>
+          <a href="https://linkedin.com/in/najibshaikh" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-large">LinkedIn</a>
+          <a href="https://github.com/nshaikhs" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-large">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer class="footer">
+    <p class="footer-colophon">This entire site &mdash; design, code, copy &mdash; was built by talking to an AI agent in a terminal. No design tool was opened. No code was written by hand. Just words.</p>
+    <p class="footer-copy">&copy; 2026 &middot; Built with Claude Code</p>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
