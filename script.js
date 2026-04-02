@@ -414,6 +414,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── Previously section fade in ──────────
+  const previouslyLabel = document.querySelector('.previously-label');
+  const previouslyItems = gsap.utils.toArray('.previously-item');
+
+  if (previouslyLabel) {
+    gsap.set(previouslyLabel, { y: 15, opacity: 0 });
+    gsap.to(previouslyLabel, {
+      y: 0, opacity: 1, duration: 0.6, ease: 'power3.out',
+      scrollTrigger: { trigger: '.previously-section', start: 'top 90%' }
+    });
+  }
+
+  if (previouslyItems.length) {
+    gsap.set(previouslyItems, { y: 12, opacity: 0 });
+    previouslyItems.forEach((item, i) => {
+      gsap.to(item, {
+        y: 0, opacity: 1, duration: 0.4, delay: i * 0.06, ease: 'power3.out',
+        scrollTrigger: { trigger: '.previously-section', start: 'top 88%' }
+      });
+    });
+  }
+
   // ── Logo ticker fade in ─────────────────
   const tickerWrap = document.querySelector('.ticker-wrap');
   if (tickerWrap) {

@@ -407,6 +407,73 @@ body, .nav, .work-card, .philosophy-card, .project-card,
   font-size: 17px;
 }
 
+/* ── Previously Section ────────────────────── */
+.previously-section {
+  padding: clamp(40px, 6vh, 72px) 0;
+}
+
+.previously-label {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 28px;
+}
+
+.previously-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+}
+
+.previously-item {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--text-dim);
+  white-space: nowrap;
+  padding: 6px 0;
+  position: relative;
+  transition: color 0.3s var(--ease-out);
+}
+
+.previously-item:hover {
+  color: var(--text-muted);
+}
+
+/* Separators between items (not on last) */
+.previously-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--text-dim);
+  opacity: 0.4;
+}
+
+@media (max-width: 768px) {
+  .previously-logos {
+    gap: 8px 24px;
+  }
+
+  .previously-item {
+    font-size: 13px;
+  }
+
+  .previously-item:not(:last-child)::after {
+    right: -12px;
+  }
+}
+
 /* ── Logo Ticker ───────────────────────────── */
 .logos-section {
   padding: clamp(32px, 5vh, 60px) 0;
