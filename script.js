@@ -434,6 +434,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── Footer CTA ────────────────────────
+  const footerCta = document.querySelector('.footer-cta');
+  if (footerCta) {
+    gsap.set(footerCta, { opacity: 0, y: 15 });
+    gsap.to(footerCta, {
+      opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+      scrollTrigger: { trigger: footerCta, start: 'top 92%' }
+    });
+  }
+
   // ── Footer colophon ────────────────────
   const colophon = document.querySelector('.footer-colophon');
   if (colophon) {
