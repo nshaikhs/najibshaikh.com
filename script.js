@@ -430,7 +430,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.set(previouslyItems, { y: 12, opacity: 0 });
     previouslyItems.forEach((item, i) => {
       gsap.to(item, {
-        y: 0, opacity: 1, duration: 0.4, delay: i * 0.06, ease: 'power3.out',
+        y: 0, opacity: 0.4, duration: 0.5, delay: i * 0.08, ease: 'power3.out',
         scrollTrigger: { trigger: '.previously-section', start: 'top 88%' }
       });
     });

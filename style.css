@@ -409,7 +409,7 @@ body, .nav, .work-card, .philosophy-card, .project-card,
 
 /* ── Previously Section ────────────────────── */
 .previously-section {
-  padding: clamp(40px, 6vh, 72px) 0;
+  padding: clamp(48px, 7vh, 80px) 0;
 }
 
 .previously-label {
@@ -419,7 +419,7 @@ body, .nav, .work-card, .philosophy-card, .project-card,
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-dim);
-  margin-bottom: 28px;
+  margin-bottom: 36px;
 }
 
 .previously-logos {
@@ -427,51 +427,142 @@ body, .nav, .work-card, .philosophy-card, .project-card,
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 12px 32px;
+  gap: 16px 48px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .previously-item {
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  color: var(--text-dim);
   white-space: nowrap;
-  padding: 6px 0;
+  padding: 8px 0;
   position: relative;
-  transition: color 0.3s var(--ease-out);
+  opacity: 0.4;
+  transition: opacity 0.4s var(--ease-out);
+  line-height: 1;
 }
 
 .previously-item:hover {
-  color: var(--text-muted);
+  opacity: 0.7;
 }
 
-/* Separators between items (not on last) */
-.previously-item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  right: -16px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: var(--text-dim);
-  opacity: 0.4;
+.wordmark-accent {
+  opacity: 0.6;
+}
+
+/* Stealth AI — clean, modern, light weight */
+.wordmark-stealth {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  text-transform: lowercase;
+}
+.wordmark-stealth .wordmark-accent {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-left: 2px;
+  font-size: 16px;
+  vertical-align: baseline;
+}
+
+/* Retailo — bold, warm brand color at reduced opacity */
+.wordmark-retailo {
+  font-family: 'DM Sans', 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #FF4B2B;
+  text-transform: lowercase;
+}
+
+/* US Mobile — bold uppercase, tech feel */
+.wordmark-usmobile {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  text-transform: uppercase;
+}
+
+/* FlatRock — serif, classic investment banking */
+.wordmark-flatrock {
+  font-family: 'Playfair Display', 'Instrument Serif', Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  font-style: normal;
+}
+
+/* Business Recorder — newspaper-style serif */
+.wordmark-bizrecorder {
+  font-family: 'Playfair Display', 'Instrument Serif', Georgia, serif;
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  text-transform: none;
+}
+
+/* Mentoga — modern clean sans */
+.wordmark-mentoga {
+  font-family: 'DM Sans', 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  text-transform: lowercase;
+}
+
+/* Caravan Media — medium weight editorial */
+.wordmark-caravan {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  font-style: italic;
+}
+
+/* Clymb AI — clean tech */
+.wordmark-clymb {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  text-transform: lowercase;
+}
+.wordmark-clymb .wordmark-accent {
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-size: 17px;
 }
 
 @media (max-width: 768px) {
   .previously-logos {
-    gap: 8px 24px;
+    gap: 12px 32px;
+    max-width: 100%;
+    padding: 0 20px;
   }
 
   .previously-item {
-    font-size: 13px;
+    opacity: 0.35;
   }
 
-  .previously-item:not(:last-child)::after {
-    right: -12px;
-  }
+  .wordmark-stealth { font-size: 17px; }
+  .wordmark-stealth .wordmark-accent { font-size: 14px; }
+  .wordmark-retailo { font-size: 19px; }
+  .wordmark-usmobile { font-size: 15px; }
+  .wordmark-flatrock { font-size: 19px; }
+  .wordmark-bizrecorder { font-size: 16px; }
+  .wordmark-mentoga { font-size: 17px; }
+  .wordmark-caravan { font-size: 18px; }
+  .wordmark-clymb { font-size: 17px; }
+  .wordmark-clymb .wordmark-accent { font-size: 14px; }
 }
 
 /* ── Logo Ticker ───────────────────────────── */
