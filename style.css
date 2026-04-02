@@ -746,6 +746,14 @@ a.ticker-item--logo:hover .ticker-icon {
   margin-bottom: 8px;
 }
 
+.work-company-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+  max-width: 600px;
+}
+
 .work-role {
   font-size: 16px;
   color: var(--text-muted);
