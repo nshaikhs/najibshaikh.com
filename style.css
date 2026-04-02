@@ -422,14 +422,25 @@ body, .nav, .work-card, .philosophy-card, .project-card,
   margin-bottom: 36px;
 }
 
-.previously-logos {
-  display: flex;
-  justify-content: center;
+.previously-ticker-wrap {
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.previously-ticker {
+  display: inline-flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 16px 48px;
-  max-width: 900px;
-  margin: 0 auto;
+  gap: 64px;
+  padding-right: 64px;
+  animation: previously-scroll 25s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes previously-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 
 .previously-item {
