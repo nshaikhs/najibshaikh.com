@@ -633,6 +633,16 @@ body, .nav, .work-card, .philosophy-card, .project-card,
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
+}
+
+a.ticker-item--logo:hover .ticker-name {
+  opacity: 0.8;
+}
+
+a.ticker-item--logo:hover .ticker-icon {
+  opacity: 1;
+  filter: grayscale(0%) brightness(1);
 }
 
 .ticker-icon {
