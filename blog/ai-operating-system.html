@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How I Built an AI Operating System (Without Writing Code) &mdash; Najib Shaikh</title>
+  <meta name="description" content="I have an Economics degree and never written production code. Over about a year, I assembled a system that handles functions previously requiring multiple people.">
+
+  <meta property="og:title" content="How I Built an AI Operating System (Without Writing Code) — Najib Shaikh">
+  <meta property="og:description" content="165 skills, 99 agents, 21 integrations. Built without writing code.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://najibshaikh.com/blog/ai-operating-system.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='Georgia,serif'>N</text></svg>">
+  <script>
+    var saved = localStorage.getItem('theme');
+    if (saved) { document.documentElement.setAttribute('data-theme', saved); }
+    else if (window.matchMedia('(prefers-color-scheme: light)').matches) { document.documentElement.setAttribute('data-theme', 'light'); }
+    else { document.documentElement.setAttribute('data-theme', 'dark'); }
+  </script>
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">NS</a>
+    <div class="nav-links">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#projects">AI Projects</a>
+      <a href="../index.html#stack">Stack</a>
+      <a href="../index.html#blog" class="nav-link-active">Writing</a>
+      <a href="../about.html">About</a>
+      <button class="nav-burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a href="../index.html#contact" class="nav-cta">Get In Touch</a>
+    </div>
+  </nav>
+
+  <section class="blog-post-hero">
+    <div class="container">
+      <a href="../index.html#blog" class="back-link">&larr; Back to writing</a>
+      <p class="section-label">Essay</p>
+      <h1 class="blog-post-title split-lines">How I Built an AI Operating System (Without Writing Code)</h1>
+    </div>
+  </section>
+
+  <section class="blog-post-body">
+    <div class="container">
+      <div class="blog-post-content">
+        <p>I have an Economics degree. I have never written production code. Until two years ago, if something needed programming, I hired someone. Then I started building with Claude, and over about a year, I assembled a system that handles functions previously requiring multiple people.</p>
+
+        <p>I want to be specific about what I built, because most writing about AI and work falls into one of two traps: techno-utopian abstraction ("AI will change everything") or defensive minimization ("AI is just a tool"). This is neither. This is the architecture, the cost, the capabilities, and the limitations.</p>
+
+        <p>The system has three layers.</p>
+
+        <p><strong>Skills</strong> are specialized capabilities. One prepares board memos. Another pulls deal data from my CRM and formats pipeline summaries. Another structures cold email sequences for specific buyer types. Skills are building blocks -- useful alone, powerful in combination. I have 165 of them.</p>
+
+        <p><strong>Agents</strong> are orchestrators that chain skills together. My meeting prep agent, triggered by a calendar event, pulls the company name from the invite, searches my CRM for all historical interactions, retrieves last three email threads, finds relevant shared documents, checks for recent news, and formats everything into a two-page brief. That brief is in my inbox before I open my laptop. The agent runs without me initiating it. I have 99 agents.</p>
+
+        <p><strong>Integrations</strong> are the connections to real systems -- calendar, CRM (Attio), email, Obsidian, task manager, and others. Twenty-one total. Without them, agents can reason in the abstract but can't act on actual information about actual work.</p>
+
+        <p>What did this replace? The work of an executive assistant, a junior analyst, a project manager, and parts of a research function. In New York, those roles cost $300K-$450K combined. The system costs a fraction and operates continuously.</p>
+
+        <p>What it did not replace: judgment. Relationships. The sales calls where trust is built through presence. The moments where something surprising happens and you improvise. The hard conversations that require reading another human. The system handles everything that can be made into a process. What's left is the work that can't.</p>
+
+        <p>A typical day: I wake up to a morning briefing assembled overnight, pulling from all my systems. It tells me what's important, what's overdue, what decisions from thirty days ago need review. I spend twenty minutes reading, not hunting for information. Then I do the actual work -- calls, strategy, writing, relationship management -- with context I didn't have to assemble.</p>
+
+        <p>The piece that took longest to build was the memory system. AI has no persistent memory between conversations by default. I built structured files that agents read and write to -- ongoing projects, active relationships, past decisions, current priorities. When I brief an agent now, it already knows the context.</p>
+
+        <p>What surprised me most was how much value came from externalizing my mental overhead. The cognitive cost of tracking everything -- open loops, pending follow-ups, ongoing projects, relationship context -- was real and I had normalized it. When the system started carrying that load, I noticed the freed-up mental space more than any specific efficiency gain. It was like discovering I'd been holding my breath.</p>
+
+        <p>You don't need to be an engineer to build this. You need to decompose your workflow into discrete steps and describe each one precisely enough that an AI can execute it. That's a thinking skill, not a coding skill. The people best at this are often operators and consultants -- people who've spent careers designing processes.</p>
+
+        <p>The design phase is where the leverage lives. A precisely written description of a workflow produces a dramatically better result than a vague one. What you prompt matters more than how you code. That's the skill to develop.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer-cta">Open to Chief of Staff and senior operations roles at AI companies in NYC. <a href="../index.html#contact">Let's talk.</a></p>
+    <p class="footer-colophon">This entire site &mdash; design, code, copy &mdash; was built by talking to an AI agent in a terminal. No design tool was opened. No code was written by hand. Just words.</p>
+    <p class="footer-copy">&copy; 2026 &middot; Built with Claude Code</p>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>
