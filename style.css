@@ -1952,3 +1952,200 @@ html.lenis, html.lenis body {
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
+
+/* ── About Page (Standalone) ─────────────── */
+
+.nav-link-active {
+  color: var(--accent) !important;
+}
+
+.about-page-hero {
+  padding: 140px 0 clamp(40px, 6vh, 80px);
+}
+
+.about-page-hero .back-link {
+  margin-bottom: 40px;
+}
+
+.about-page-label {
+  margin-bottom: 24px;
+}
+
+.about-page-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  max-width: 800px;
+}
+
+.about-page-section {
+  padding: 0 0 clamp(80px, 12vh, 160px);
+}
+
+.about-page-content {
+  max-width: 760px;
+}
+
+.about-page-block {
+  margin-bottom: clamp(56px, 8vh, 96px);
+}
+
+.about-page-lead {
+  font-size: 20px;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.about-page-text {
+  font-size: 17px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-page-text:last-child {
+  margin-bottom: 0;
+}
+
+.about-page-heading {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: clamp(24px, 3vh, 40px);
+}
+
+/* ── About Page Timeline ─────────────────── */
+.about-timeline {
+  position: relative;
+  padding-left: 32px;
+  margin-top: clamp(32px, 4vh, 48px);
+}
+
+.about-timeline::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 0;
+  bottom: 8px;
+  width: 1px;
+  background: var(--border);
+}
+
+.about-timeline-item {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.about-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.about-timeline-marker {
+  position: absolute;
+  left: -36px;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--text-dim);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+.about-timeline-current .about-timeline-marker {
+  background: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), 0 0 8px var(--accent-glow);
+}
+
+.about-timeline-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.about-timeline-role {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.about-timeline-company {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.about-timeline-desc {
+  font-size: 15px;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+
+/* ── About Page CTA Block ────────────────── */
+.about-page-cta-block {
+  padding: clamp(32px, 4vw, 56px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg-card);
+  box-shadow: var(--shadow-card);
+}
+
+.about-page-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+/* ── About Page Responsive ───────────────── */
+@media (max-width: 768px) {
+  .about-page-hero {
+    padding-top: 120px;
+  }
+
+  .about-timeline {
+    padding-left: 24px;
+  }
+
+  .about-timeline-marker {
+    left: -28px;
+  }
+
+  .about-page-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page-hero {
+    padding-top: 100px;
+  }
+
+  .about-timeline {
+    padding-left: 20px;
+  }
+
+  .about-timeline-marker {
+    left: -24px;
+  }
+
+  .about-page-cta-block {
+    padding: 24px;
+  }
+}
