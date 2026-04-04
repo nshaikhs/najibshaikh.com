@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 20 Skills That Make Claude Code Actually Useful | Najib Shaikh</title>
+  <meta name="description" content="Most people use Claude Code like a smarter search box. The real capability comes from skills -- plugins that give Claude specialized knowledge and behaviors for specific domains.">
+
+  <meta property="og:title" content="The 20 Skills That Make Claude Code Actually Useful | Najib Shaikh">
+  <meta property="og:description" content="Most people use Claude Code like a smarter search box. The real capability comes from skills -- plugins that give it specialized knowledge and behaviors.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://najibshaikh.com/blog/claude-code-skills.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='Georgia,serif'>N</text></svg>">
+  <script>
+    var saved = localStorage.getItem('theme');
+    if (saved) { document.documentElement.setAttribute('data-theme', saved); }
+    else if (window.matchMedia('(prefers-color-scheme: light)').matches) { document.documentElement.setAttribute('data-theme', 'light'); }
+    else { document.documentElement.setAttribute('data-theme', 'dark'); }
+  </script>
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">NS</a>
+    <div class="nav-links">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#projects">AI Projects</a>
+      <a href="../index.html#stack">Stack</a>
+      <a href="../index.html#blog" class="nav-link-active">Writing</a>
+      <a href="../about.html">About</a>
+      <button class="nav-burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a href="../index.html#contact" class="nav-cta">Get In Touch</a>
+    </div>
+  </nav>
+
+  <section class="blog-post-hero">
+    <div class="container">
+      <a href="../index.html#blog" class="back-link">&larr; Back to writing</a>
+      <p class="section-label">Essay</p>
+      <h1 class="blog-post-title split-lines">The 20 Skills That Make Claude Code Actually Useful</h1>
+    </div>
+  </section>
+
+  <section class="blog-post-body">
+    <div class="container">
+      <div class="blog-post-content">
+        <p>Most people who try Claude Code use it like a smarter search box. They ask a question, get an answer, close the tab.</p>
+
+        <p>The real capability comes from skills -- plugins that give Claude specialized knowledge and behaviors for specific domains. Think of them like apps on a phone. The difference is that skills don't just give Claude information. They give it the ability to execute entire workflows on your behalf.</p>
+
+        <p>I have 200 skills installed. About 165 run regularly inside what I've built as an AI operating system on top of Claude. I have an Economics degree and have never written production code. What I've done is learn how to configure, combine, and direct these skills in ways that handle work that used to require multiple people.</p>
+
+        <p>Here are the 20 that actually matter.</p>
+
+        <h2>Memory and Continuity</h2>
+
+        <p><strong>claude-mem</strong></p>
+
+        <p>Claude has no memory between conversations by default. Every session starts fresh. This skill fixes that by creating persistent files Claude reads at session start -- active projects, key relationships, past decisions, ongoing context. When I say "prepare me for the Attio follow-up," Claude already knows the history. Without this, everything else resets constantly.</p>
+
+        <p><strong>continuous-learning-v2</strong></p>
+
+        <p>Learns from how sessions go. When something works well, or I make a correction, it builds preferences and patterns that persist. Over time, the system gets calibrated to how I think rather than starting neutral every time.</p>
+
+        <h2>Development Workflow</h2>
+
+        <p><strong>superpowers</strong></p>
+
+        <p>The most comprehensive development skill I've found. Enforces test-driven development automatically, runs code reviews the moment I write something, handles parallel tasks with multiple agents, and manages git branching for large changes. For someone building without a technical cofounder, this turns Claude into a full development workflow rather than just a code generator.</p>
+
+        <p><strong>get-shit-done (GSD)</strong></p>
+
+        <p>Project management inside Claude. I type <strong>/gsd:new-project</strong> and it structures everything into phases, execution steps, and verification checkpoints. It tracks what's done, pending, blocked. The value is that it forces structure before I start -- which prevents the common failure mode of building the wrong thing in the right way.</p>
+
+        <p><strong>tdd-workflow</strong></p>
+
+        <p>Write the test first, watch it fail, then write the code to make it pass. It sounds backwards until you realize how many bugs it prevents. For someone non-technical like me, having this enforced automatically means I have proof something works, not just the hope that it does.</p>
+
+        <h2>Research and Documentation</h2>
+
+        <p><strong>context7</strong></p>
+
+        <p>When Claude builds something using a library or API, it's working from training data that might be a year out of date. Context7 fetches current, live documentation before writing code. The result is fewer bugs from outdated information. For production work, this is not optional.</p>
+
+        <p><strong>deep-research</strong></p>
+
+        <p>Enterprise-grade research with citations. When I need to understand a market, a competitor, or a regulatory question, this skill runs a structured multi-step research process and produces a sourced document. I use this before sales calls and before any important meeting where knowing more than the other side is useful.</p>
+
+        <p><strong>defuddle</strong></p>
+
+        <p>Fetches any web page and strips all the noise -- ads, navigation, pop-ups -- returning clean, readable text. When directing Claude to research something from specific sources, this is what makes those sources usable.</p>
+
+        <h2>AI and Integration Building</h2>
+
+        <p><strong>mcp-builder</strong></p>
+
+        <p>MCP (Model Context Protocol) is how Claude connects to external systems. This skill builds those connections. When I needed Claude linked to my CRM, calendar, and task manager, this handled the construction. For anyone building AI workflows that touch real systems rather than just generating text, it's the foundation.</p>
+
+        <p><strong>context-engineering</strong></p>
+
+        <p>Designing multi-agent systems: workflows where multiple AI agents run in parallel and pass context between each other. I used this to build my morning briefing architecture, where several agents pull from different sources simultaneously and a coordinator synthesizes them. For complex automated workflows, this is the structural layer that holds everything together.</p>
+
+        <h2>Business and Revenue</h2>
+
+        <p><strong>cold-email</strong></p>
+
+        <p>Generates B2B cold email sequences with real structure: opening, value proposition, specific ask, follow-up timing, variation testing. The skill understands pacing and sequencing in a way that one-off prompt requests don't. Having run outreach at Ad-Shield, I can say the output is calibrated around what gets responses rather than what sounds professional.</p>
+
+        <p><strong>seo-audit</strong></p>
+
+        <p>Runs a full SEO analysis on any page -- missing metadata, keyword gaps, content structure, technical issues, competitive positioning. This is what I used to audit the Ad-Shield website that came back at 59 out of 100 with a 27-item action list. A one-person task that used to require an agency retainer.</p>
+
+        <p><strong>copywriting</strong></p>
+
+        <p>Marketing copy for any format: landing pages, email campaigns, LinkedIn posts, sales decks. This skill understands persuasion structure, not just grammar. The output reads like something a good copywriter wrote.</p>
+
+        <h2>Design and Interface</h2>
+
+        <p><strong>ui-ux-pro-max</strong></p>
+
+        <p>Comprehensive design intelligence: typography systems, component hierarchies, layout patterns, accessibility, visual hierarchy. When directing Claude to build a frontend, this skill shapes the decisions that make the result look intentional rather than functional-but-rough.</p>
+
+        <p><strong>frontend-design</strong></p>
+
+        <p>The execution layer to ui-ux-pro-max's thinking layer. Builds production-grade interfaces that are responsive, accessible, and visually polished -- without extensive cleanup after the fact.</p>
+
+        <h2>Operations</h2>
+
+        <p><strong>cos-briefing</strong></p>
+
+        <p>Every morning, this generates a structured briefing from my calendar, email, CRM, task list, decision log, and project tracker. I wake up knowing what matters, what's overdue, and what decisions from thirty days ago need review. I didn't write this briefing. I designed what it should contain, and now it runs automatically. This one skill changed my mornings more than anything else I've built.</p>
+
+        <p><strong>cos-triage</strong></p>
+
+        <p>Multi-channel inbox management. Reads across email and other channels, categorizes by urgency, flags what needs a decision, and drafts responses where appropriate. For someone running two jobs and multiple side projects, inbox triage used to be a meaningful chunk of every day. Now it isn't.</p>
+
+        <p><strong>cos-ghost</strong></p>
+
+        <p>Ghostwriting in my voice. This skill has ingested enough of my writing to produce content that sounds like me -- the sentence structure, the directness, no filler. When I need a first draft that doesn't require a full rewrite, this is where I start.</p>
+
+        <h2>Document Handling</h2>
+
+        <p><strong>xlsx</strong></p>
+
+        <p>Reads, creates, and edits spreadsheets directly. Data exports, financial models, pipeline reports -- this handles them without requiring me to extract and paste data manually into a conversation.</p>
+
+        <p><strong>pdf</strong></p>
+
+        <p>Creates and edits PDFs. Board reports, formal summaries, anything that needs to go as a finished file. Combined with the briefing and research skills, this produces documents I can send without additional formatting work.</p>
+
+        <h2>Why This Matters for Operators</h2>
+
+        <p>The reason I built a system around these skills rather than using AI conversationally is leverage. A single conversation with Claude is useful. A system of skills that runs workflows, maintains memory, and connects to real systems is something different.</p>
+
+        <p>The people who will get the most out of this technology are not engineers. They're operators: people who can decompose a workflow into discrete steps and describe each one precisely enough for an AI to execute. That is a thinking skill, not a technical one. Economists, consultants, project managers, chiefs of staff. People who've spent careers designing how things get done.</p>
+
+        <p>The skills provide specialized capability. The operator provides the judgment about what's worth automating and how the pieces fit together. That's the design challenge, and it's harder than the technical one.</p>
+
+        <p>The system I've built does not make decisions. It executes decisions I've already made about how my work should run. The cognitive overhead of tracking everything -- open loops, pending follow-ups, meeting prep -- moves out of my head and into the system. What remains is the work that actually requires me.</p>
+
+        <p>That's the actual promise. Not that AI does the work. That it carries enough of the load to let you do the work that matters.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer-cta">Open to senior leadership, strategy &amp; operations, and fractional roles at AI companies in the US. <a href="../index.html#contact">Let's talk.</a></p>
+    <p class="footer-copy">&copy; 2026 Najib Shaikh</p>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>
