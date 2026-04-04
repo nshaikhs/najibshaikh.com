@@ -206,26 +206,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        animateCounter(entry.target);
+        setTimeout(() => animateCounter(entry.target), 800);
         counterObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.3 });
 
   document.querySelectorAll('[data-count]').forEach(el => {
     counterObserver.observe(el);
   });
 
   function animateCounter(el) {
-    const target = parseInt(el.getAttribute('data-count'), 10);
-    const duration = 1600;
+    const target = parseFloat(el.getAttribute('data-count'));
+    const isDecimal = target < 10;
+    const duration = 2000;
     const start = performance.now();
 
     function update(now) {
       const elapsed = now - start;
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - Math.pow(2, -10 * progress);
-      el.textContent = Math.round(target * eased);
+      const current = target * eased;
+      el.textContent = isDecimal ? Math.round(current * 10) / 10 : Math.round(current);
       if (progress < 1) requestAnimationFrame(update);
     }
     requestAnimationFrame(update);
