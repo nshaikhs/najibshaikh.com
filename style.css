@@ -716,7 +716,6 @@ a.ticker-item--logo:hover .ticker-icon {
 
 .work-card-header {
   padding: clamp(28px, 4vw, 48px);
-  cursor: pointer;
 }
 
 .work-meta {
@@ -833,20 +832,29 @@ a.ticker-item--logo:hover .ticker-icon {
   font-weight: 500;
 }
 
-/* Open state indicator */
-.work-card-header::after {
-  content: '+';
+/* Open state indicator — real button */
+.work-expand-btn {
   position: absolute;
   top: clamp(28px, 4vw, 48px);
   right: clamp(28px, 4vw, 48px);
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
   font-family: var(--font-body);
   font-size: 24px;
   font-weight: 300;
+  line-height: 1;
   color: var(--text-dim);
   transition: transform 0.4s var(--ease-out);
+  z-index: 2;
 }
 
-.work-card.open .work-card-header::after {
+.work-expand-btn:hover {
+  color: var(--accent);
+}
+
+.work-card.open .work-expand-btn {
   transform: rotate(45deg);
 }
 
@@ -1762,7 +1770,7 @@ a.ticker-item--logo:hover .ticker-icon {
     padding: 24px;
   }
 
-  .work-card-header::after {
+  .work-expand-btn {
     top: 24px;
     right: 24px;
   }

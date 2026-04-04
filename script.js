@@ -295,9 +295,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Work card expand/collapse ──────────
   document.querySelectorAll('.work-card').forEach(card => {
-    const header = card.querySelector('.work-card-header');
-    const metrics = card.querySelector('.work-metrics');
+    const expandBtn = card.querySelector('.work-expand-btn');
     const body = card.querySelector('.work-body');
+
+    if (!expandBtn) return;
 
     function toggle() {
       const isOpen = card.classList.contains('open');
@@ -336,12 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    header.addEventListener('click', (e) => {
-      if (e.target.tagName === 'A') return;
-      toggle();
-    });
-
-    metrics.addEventListener('click', toggle);
+    expandBtn.addEventListener('click', toggle);
   });
 
   // Track mouse for project case glow
