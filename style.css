@@ -1713,13 +1713,19 @@ a.ticker-item--logo:hover .ticker-icon {
   }
 
   .hero-stats {
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 24px 16px;
+    justify-content: center;
   }
 
   .stat-divider {
-    width: 48px;
-    height: 1px;
+    display: none;
+  }
+
+  .stat {
+    min-width: 40%;
+    text-align: center;
   }
 
   .hero-ctas {
@@ -2233,4 +2239,140 @@ html.lenis, html.lenis body {
   .blog-post-hero {
     padding-top: 100px;
   }
+}
+
+/* ═══════════════════════════════════════════
+   MOBILE EXPERIENCE IMPROVEMENTS
+   ═══════════════════════════════════════════ */
+
+/* ── Hero Stats: 2x2 grid on mobile ───────── */
+/* (integrated into existing 768px breakpoint above) */
+
+/* ── Work Card: touch-friendly expand btn ──── */
+@media (max-width: 768px) {
+  .work-expand-btn {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .work-metrics {
+    cursor: pointer;
+  }
+
+  .metric {
+    min-height: 44px;
+  }
+}
+
+/* ── Repo cards: single column on mobile ───── */
+/* (already handled in existing 768px breakpoint) */
+
+/* ── Touch-friendly tap targets ────────────── */
+@media (max-width: 768px) {
+  .btn {
+    min-height: 44px;
+    padding: 12px 28px;
+  }
+
+  .btn-large {
+    min-height: 48px;
+    padding: 14px 36px;
+  }
+
+  .nav-links a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-burger {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links.mobile-open .nav-cta {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .project-card-link,
+  .blog-post-link {
+    min-height: 44px;
+  }
+
+  .project-case-header {
+    min-height: 44px;
+  }
+
+  .theme-toggle {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .ticker-item--logo {
+    min-height: 44px;
+  }
+
+  .back-link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .about-page-actions .btn {
+    min-height: 44px;
+  }
+}
+
+/* ── Reduced motion ────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .grain::before {
+    animation: none;
+  }
+
+  .scroll-line {
+    animation: none;
+    opacity: 0.5;
+  }
+
+  .ticker {
+    animation: none;
+  }
+
+  .previously-ticker {
+    animation: none;
+  }
+
+  .project-status {
+    animation: none;
+    opacity: 1;
+  }
+
+  .project-card:hover,
+  .blog-post:hover,
+  .repo-card:hover,
+  .philosophy-card:hover,
+  .work-card:hover {
+    transform: none;
+  }
+}
+
+/* ── iOS smooth momentum scrolling ─────────── */
+body,
+.nav-links.mobile-open {
+  -webkit-overflow-scrolling: touch;
 }
